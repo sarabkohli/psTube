@@ -1,0 +1,9 @@
+<div [routerLink]="['/videos', frameVideo?.nid]" class="video-frame">
+    <div class="frame-image">
+        <img src="{{frameVideo?.images[320].path}}">
+    </div>
+    <p class="frame-callout">
+        <span class="frame-tag">{{frameVideo?.node.post_tags[0]}}</span>
+        {{frameVideo?.node.title}}
+    </p>
+</div>

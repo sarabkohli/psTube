@@ -1,0 +1,4 @@
+<div class="video-list-view">
+    <app-frame *ngFor="let video of apiVideoData" (onFrameVideoSelected)="onFrameVideoSelected($event)" [frameVideo]="video" class="app-frame"></app-frame>
+</div>
+
