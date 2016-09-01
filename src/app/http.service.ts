@@ -4,7 +4,7 @@ import 'rxjs/Rx';
 
 @Injectable()
 export class HttpService {
-    private urlEndpoint = "http://popsugar.dev11.onsugar.com/api2?psdemo=true&types=video&limit=3&video_type=1";
+    private urlEndpoint = "http://popsugar.dev11.onsugar.com/api2?psdemo=true&types=video&limit=20&video_type=1";
     private params:Array<any>;
 
     constructor(private http:Http) {
@@ -13,11 +13,11 @@ export class HttpService {
 
     getParams() {
         return this.params;
-    }
+    };
 
     setParams(params: Array<any>) {
         this.params = params;
-    }
+    };
 
     getData() {
         let paramsUrl = "";
@@ -29,5 +29,5 @@ export class HttpService {
 
         return this.http.get(this.urlEndpoint + paramsUrl)
             .map((response:Response) => response.json());
-    }
+    };
 }
